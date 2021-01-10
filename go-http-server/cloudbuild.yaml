@@ -1,10 +1,5 @@
 steps:
 
-- id: "ls -la"
-  name: 'bash'
-  env: ['GOPATH=go-http-server']
-  args: ['ls', '-la']
-
 - id: "Run tests"
   name: 'gcr.io/cloud-builders/go'
   env: ['GOPATH=go-http-server']
@@ -12,7 +7,7 @@ steps:
 
 - id: "Building docker image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "axell13/microservices-devops-challenge05-go", "."]
+  args: ["build", "-t", "axell13/microservices-devops-challenge05-go", "go-http-server"]
 
 - id: "Uploading docker image"
   name: 'gcr.io/cloud-builders/docker'

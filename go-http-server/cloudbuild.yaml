@@ -1,0 +1,15 @@
+steps:
+
+- id: "Run tests"
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test', 'challenge05', '-v', '-cover']
+  env:
+  - GOPATH=.
+
+- id: "Building docker image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ["build", "-t", "axell13/microservices-devops-challenge05-go", "."]
+
+- id: "Uploading docker image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "axell13/microservices-devops-challenge05-go"]

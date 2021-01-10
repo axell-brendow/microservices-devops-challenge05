@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge05-go-http-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: challenge05-go-http-server
+  template: # inside template we will have a pod specification
+    metadata:
+      labels:
+        app: challenge05-go-http-server
+    spec:
+      containers:
+        - name: challenge05-go-http-server
+          image: axell13/microservices-devops-challenge05-go
+          ports:
+            - containerPort: 8000

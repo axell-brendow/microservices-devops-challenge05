@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: challenge05-nginx-conf
+data:
+  nginx.conf: |
+    server {
+      listen 80;
+
+      location / {
+        add_header Content-Type text/html;
+        return 200 "<h1>Code.education Rocks</h1>";
+      }
+    }

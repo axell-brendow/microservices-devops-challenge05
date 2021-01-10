@@ -4,11 +4,3 @@ steps:
   name: 'gcr.io/cloud-builders/go'
   env: ['GOPATH=go-http-server']
   args: ['test', 'challenge05', '-v', '-cover']
-
-- id: "Building docker image"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "axell13/microservices-devops-challenge05-go", "go-http-server"]
-
-- id: "Uploading docker image"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "axell13/microservices-devops-challenge05-go"]

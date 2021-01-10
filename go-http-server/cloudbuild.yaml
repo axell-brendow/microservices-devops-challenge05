@@ -1,5 +1,10 @@
 steps:
 
+- id: "ls -la"
+  name: 'bash'
+  env: ['GOPATH=.']
+  args: ['ls', '-la']
+
 - id: "Run tests"
   name: 'gcr.io/cloud-builders/go'
   env: ['GOPATH=.']

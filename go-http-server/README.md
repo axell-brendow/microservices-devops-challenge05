@@ -3,7 +3,8 @@
 To create this Deployment in your cluster:
 
 ```
-kubectl apply -f .
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 ```
 
 > Load Balancer: http://35.202.20.52/

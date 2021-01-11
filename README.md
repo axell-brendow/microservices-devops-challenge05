@@ -5,6 +5,9 @@ Course "[Architecting and Developing modern and scalable applications based on M
 - 3 Nginx replicas with a Load Balancer
 - MySQL with Secret Object and PersistentVolume
 - Http server in Go with CI and tests in GCP
+    > Load Balancer: http://35.202.20.52/
+    
+    > Docker Image: [axell13/microservices-devops-challenge05-go](https://hub.docker.com/r/axell13/microservices-devops-challenge05-go)
 
 ## Other challenges
 
